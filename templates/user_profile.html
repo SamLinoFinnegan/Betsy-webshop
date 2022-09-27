@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="flash">
+    {% for msg in get_flashed_messages() %}
+    <p > {{ msg }}
+    {% endfor %}
+</div>
+
+<div class="user_info">
+    <div>
+        <h1>User :{{user_obj.name}} </h1>
+    </div>
+    <div>
+        <p>Address:{{user_obj.address}}</p>
+    </div>
+    <div>
+        <p>Billing:{{user_obj.billing}}</p>
+    </div>
+    <div>
+        <p>Password:XXXXXXXXX</p>
+    </div>
+</div>
+<div class="user_add_product">
+    <div class="add_products_header">
+        <h2>Add products to your inventory</h2>
+    </div>
+    <div>
+        <form method="post">
+            <label for="product_name">Product name</label>
+            <br/>
+            <input type="text" name="product_name">
+            <br/>
+            <label for="description">Description</label>
+            <br/>
+
+            <input type="text" name="description">
+            <br/>
+
+            <label for="price">Price</label>
+            <br/>
+
+            <input type="text" name="price">
+            <br/>
+
+            <label for="quantity">Quantity</label>
+            <br/>
+
+            <input type="text" name="quantity">
+            <br/>
+
+            <label for="tag">Tag</label>
+            <br/>
+
+            <input type="text" name="tag">
+            <br/>
+
+            <input type="submit" value="Add Item">
+        </form>
+    </div>
+</div>
+
+<div class="user_items_container">
+    <div class="item_header">
+        <h2>Your items</h2>
+    </div>
+    <ul>
+    {% if products %}
+    {% for prod in products %}
+        <li>
+            <a href="my_product_page/{{prod[0]}}">
+                {{prod[1]}}
+            </a>
+        </li>
+        {% endfor %}
+    {% endif %}
+    </ul>
+</div>
+{% endblock content %}

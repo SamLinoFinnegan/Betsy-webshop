@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="flash">
+    {% for msg in get_flashed_messages() %}
+    <p >{{ msg }}</p>
+    {% endfor %}
+</div>
+
+<div class="login_form">
+    
+    <form method="post">
+        <label for="user_name">Email</label>
+        <br/>
+        <input type="email" name="user_name">
+        <br/>
+
+        <label for="user_name">Password</label>
+        <br/>
+
+        <input type="password" name="user_password">
+        <br/>
+
+        <input type="submit" value="Log in">
+    </form>
+    <div>
+        <p>Dont have an account?</p>
+        <a href="/signup">Sign up</a>
+    </div>
+</div>
+{% endblock content %}

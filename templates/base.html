@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- We use url_for to link a stylesheet named `style.css` within the folder 'static' here. -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+
+        <!-- Use Jinja to put a title here. -->
+        <title>{{title}}</title>
+    </head>
+
+    <body>
+        
+        <div class="nav_bar">
+            {% if "user" in session %}
+                <ul>
+                    <li><a href="/profile">{{user_name}}</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/logout">Log Out</a></li>
+                </ul>
+            {% else: %}
+                <h1>Welcome to Betsy-Webshop</h1>
+            {% endif %}
+          </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

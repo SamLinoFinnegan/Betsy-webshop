@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="flash">
+    {% for msg in get_flashed_messages() %}
+    <p > {{ msg }}</p>
+    {% endfor %}
+</div>
+<div class="header">
+    <h2>Product Page</h2> 
+</div>
+<div class="product_container">
+    {% if my_product %}
+    <h1>Name: {{my_product.name.capitalize()}}</h1>
+    <h2>Description: {{my_product.description.capitalize()}}</h2>
+    <h2>Price: {{my_product.price}}</h2>
+    <h2>Quantity: {{my_product.quant}}</h2>
+    <h2>This item belongs to: {{my_product.user.name.capitalize()}}</h2>
+    <h2>Tags:</h2>
+    {% for tag in my_product.tag %}
+    <p>{{tag.name}}</p>
+    {% endfor %}
+    {% endif %}
+</div>
+<form method="post" >
+ 
+    <input id="remove" type="submit" value="Remove" name="remove" />
+    <input type="number" name="quantity">
+    <input id="quantity" type="submit" value="Change" name="change_quant" />
+</form>
+{% endblock content%}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Your error message logic and HTML here. -->
+<div class="flash">
+    {% for msg in get_flashed_messages() %}
+        <P >{{msg}}</P>
+        {% endfor%}
+ 
+</div>
+
+        
+
+<div class="signup_form">
+    <form method="post">
+        <label for="username">Email</label>
+    </br>
+        <input id="username" type="email" name="new_user">
+    </br>
+        <label for="username">Address</label>
+    </br>
+
+        <input id="address" type="text" name="address">
+    </br>
+        <label for="username">Billing details</label>
+    </br>
+        <input id="billing" type="text" name="billing">
+    </br>
+        <label for="username">Password</label>
+    </br>
+        <input id="password" type="password" name="new_password">
+    </br>
+        <label for="username">Re enter your Password</label>
+    </br>
+        <input id="re_password" type="password" name="re_password">
+    </br>
+        <input type="submit" value="Sign up">
+    </form>
+    <div>
+        <p>Already have an account?</p>
+        <a href="/login">Log in</a>
+    </div>
+</div>
+{% endblock content %}
+

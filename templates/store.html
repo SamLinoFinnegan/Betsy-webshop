@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flash">
+    {% for msg in get_flashed_messages() %}
+    <p > {{ msg }}</p>
+    
+    {% endfor %}
+</div>
+<div class="header">
+    <h2>Store Page</h2>
+</div>
+<p>Here are your items</p>
+<div class="product_container">
+    <ul>
+    {% if items %}
+        {% for product in items %}
+        <li>
+            <a href="product_page/{{product[0]}}">
+                {{product[1]}}
+                
+            </a>
+        </li>
+        {% endfor%}
+    {% endif %}
+    </ul>
+</div>
+
+
+{% endblock content %}

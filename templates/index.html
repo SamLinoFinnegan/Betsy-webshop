@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flash">
+  {% for msg in get_flashed_messages() %}
+  <p > {{ msg }}</p>
+  {% endfor %}
+</div>
+ 
+
+<div class="search_bar">
+  <div class="header">
+    <h2>Home</h2>
+  </div>
+  <p>Welcome to Betsy Webshop.</p>
+  <p>Search the product</p>
+  
+  <div class="form_container">
+  <form method="post">
+    <div class="search_bar">
+      <label for="item">Search</label>
+      <br/>
+      <input id="item" type="text" name="item">
+    </div>
+    <div class="radio_btns_container">
+      <div class="radio_btns">
+        <label for="option">Product</label>
+        <input type="radio" name="option" value="product">
+      </div>
+      <br/>
+      <div class="radio_btns">
+        <label for="option">User</label>
+        <input type="radio" name="option" value="user">
+      </div>
+      <br/>
+      <div class="radio_btns">
+        <label for="option">Tag</label>    
+        <input type="radio" name="option" value="tag">
+      </div>
+    </div>
+    <div class="submit_btn">
+      <input type="submit" value="search">
+    </div>
+  </form>
+</div>
+</div>
+<div class="content_container">
+  <div class="users_container">
+    <h2>Meet the Users</h2>
+    <ul class="list_users">
+    {% for name in users %}
+      <li><p>{{name}}</p></li>
+    {% endfor %}
+    </ul>
+  </div>
+
+</div>
+
+{% endblock content %}
+
