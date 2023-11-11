@@ -54,7 +54,6 @@ This project was inspired by the following resources:
 ### Additional Notes
 
 * The admin panel is accessible at `http://localhost:5000/admin`
-* The database is populated with sample data for development purposes. You can reset the database by running the following command:
 
 
 
