@@ -1,81 +1,60 @@
-# Betsy Webshop
+## Betsy Webshop
 
 Betsy Webshop is a full-stack web application built with Flask and SQL, providing a seamless shopping experience. It allows users to browse products, add them to the cart, and complete the purchase.
 
-## Table of Contents
+### Features
 
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+* Product Management: Browse and view products, add to cart
+* Shopping Cart: Manage items in cart, adjust quantities and remove items, proceed to checkout
+* User Authentication: Register and log in to accounts, track order history
+* Order Processing: Secure checkout process, view order confirmation, receive email notifications
+* Admin Panel: Manage product listings, monitor and fulfill orders, manage users
 
-## Features
-
-- **Product Management:**
-  - Browse a wide range of products.
-  - View detailed product information.
-  - Add products to the shopping cart.
-
-- **Shopping Cart:**
-  - Easily manage items in the cart.
-  - Adjust quantities and remove items.
-  - Proceed to checkout.
-
-- **User Authentication:**
-  - Register an account.
-  - Log in securely.
-  - Track order history.
-
-- **Order Processing:**
-  - Secure checkout process.
-  - View order confirmation.
-  - Receive email notifications.
-
-- **Admin Panel:**
-  - Manage product listings.
-  - Monitor and fulfill orders.
-  - User management.
-
-## Getting Started
+### Getting Started
 
 ### Prerequisites
 
-Make sure you have the following installed on your machine:
-
-- [Python](https://www.python.org/) (3.x recommended)
-- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-- [SQL Database](your-database-link)
+* Python 3.x
+* Flask
+* SQL Database
 
 ### Installation
 
-1. **Clone the Repository:**
-
-   ```
-   git clone https://github.com/SamLinoFinnegan/Betsy-webshop.git
-  ```
-2. Navigate to the Project Directory:
-  ```
-  cd your-webshop
-  ```
-3. Create a Virtual Environment:
-  ```
-  python -m venv venv
-  ```
-# Activate the Virtual Environment:
-## On Windows:
-  ```
-  .\venv\Scripts\activate
-  ```
-## On macOS/Linux:
-  ```
-  source venv/bin/activate
-  ```
-
-# Install Dependencies:
+```markdown
+git clone https://github.com/SamLinoFinnegan/Betsy-webshop.git
+cd Betsy-webshop
+python -m venv venv
+. venv/bin/activate
 pip install -r requirements.txt
+
+flask run
+
+
+2. Open your web browser and go to `http://localhost:5000/`
+
+3. Create an account and log in
+
+4. Browse products and add them to your cart
+
+5. Proceed to checkout and complete your purchase
+
+
+### License
+
+Betsy Webshop is licensed under the MIT License.
+
+### Acknowledgments
+
+This project was inspired by the following resources:
+
+* Flask Tutorial: https://flask.palletsprojects.com/en/2.0.x/quickstart/
+* Peewee ORM Documentation: https://peewee.readthedocs.io/en/latest/
+* Bootstrap CSS Framework: https://getbootstrap.com/
+
+### Additional Notes
+
+* The admin panel is accessible at `http://localhost:5000/admin`
+* The database is populated with sample data for development purposes. You can reset the database by running the following command:
+
+
 
