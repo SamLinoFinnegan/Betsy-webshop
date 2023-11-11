@@ -58,4 +58,24 @@ Make sure you have the following installed on your machine:
    ```
    git clone https://github.com/SamLinoFinnegan/Betsy-webshop.git
   ```
+2. Navigate to the Project Directory:
+  ```
+  cd your-webshop
+  ```
+3. Create a Virtual Environment:
+  ```
+  python -m venv venv
+  ```
+# Activate the Virtual Environment:
+## On Windows:
+  ```
+  .\venv\Scripts\activate
+  ```
+## On macOS/Linux:
+  ```
+  source venv/bin/activate
+  ```
+
+# Install Dependencies:
+pip install -r requirements.txt
 
